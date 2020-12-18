@@ -1,63 +1,67 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script language="JavaScript">
+          function showInput() {
+             const user_input= document.getElementById("user_input").value;
+             const users_input=      document.getElementById("users_input").value;
+             const user_msg= document.getElementById('user_msg').value;
+
+             console.log(user_input,users_input,user_msg)
+                         
+          }
+         
+        </script>
   <title>Logicoded </title>
-</head>
-<body>
-  <div class="upload_code">
-      <input type="text" name="name"   id="code">
-      <input type="text" name="description" multiple   id="code-descriptiom ">
-      <textarea name="code" id="code-body" cols="30" rows="10"></textarea>
-      <button class="submit-btn" onclick="submit_code()">Submit Code </button>
-  </div>
+      
+        </head>
+    <body>
+        <div class="upload_code">
+            <input type="text"  placeholder="Name" id="user_input">
+            <input type="text" placeholder="lastname" id="users_input">
+            <textarea name="Message" id="user_msg" cols="30" rows="10"></textarea>
+        <input type="submit" onclick="showInput();"><br/>
+          
+        </div>
+        <br>
 
-  <script>  
-    const code_tittle = ""
-    
-    document.querySelector("input").addEventListener("change", (event) => {
-      console.log("colsooos")
-      code_tittle = event.target.value
-    })
-    // const code_description = document.querySelector("#code-descriptiom").value 
-    // const code_body = document.querySelector("#code-body").value 
-
-    function submit_code () {
-      console.log( code_tittle)
-    }
-  </script>
-
-  <style>
-    * {
-      background-color: transparent;
-      outline: none;
-
-    }
-
-   
-    input {
-      height: 40px;
-    }
-    .upload_code {
-      margin-top: 100px;
-      display: grid;
-      grid-template-columns: 1fr;
-      row-gap: 30px;
-    }
-
-    .submit-btn {
-      background-color: blue;
-      color: white;
-      height: 40px;
-    }
-     .upload_code input , .upload_code textarea, .upload_code button {
-      color: green;
-      width: 90%;
-      margin-left: 10%;
-      max-width: 400px;
-    }
-    
-  </style>
-</body>
+        <style>
+          * {
+            background-color: transparent;
+            outline: none;
+      
+          }
+      
+         
+          input {
+            height: 40px;
+          }
+          .upload_code {
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+          }
+      
+          .submit-btn {
+            background-color: blue;
+            color: white;
+            height: 40px;
+          }
+           .upload_code input , .upload_code textarea, .upload_code button {
+            color: green;
+            width: 90%;
+            margin-left: 10%;
+            max-width: 400px;
+          }
+          
+        </style>
+      
+    </body>
 </html>

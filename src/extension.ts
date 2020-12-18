@@ -99,9 +99,75 @@ export function activate(context: ExtensionContext) {
 
 function getWebviewContent() {
 	return `
-	
-	asdsa
-`
+	 
+
+
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script language="JavaScript">
+          function showInput() {
+             const user_input= document.getElementById("user_input").value;
+             const users_input=      document.getElementById("users_input").value;
+             const user_msg= document.getElementById('user_msg').value;
+
+             console.log(user_input,users_input,user_msg)
+                         
+          }
+         
+        </script>
+  <title>Logicoded </title>
+      
+        </head>
+    <body>
+        <div class="upload_code">
+            <input type="text"  placeholder="Name" id="user_input">
+            <input type="text" placeholder="lastname" id="users_input">
+            <textarea name="Message" id="user_msg" cols="30" rows="10"></textarea>
+        <input type="submit" onclick="showInput();"><br/>
+          
+        </div>
+        <br>
+
+        <style>
+          * {
+            background-color: transparent;
+            outline: none;
+      
+          }
+      
+         
+          input {
+            height: 40px;
+          }
+          .upload_code {
+            margin-top: 100px;
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+          }
+      
+          .submit-btn {
+            background-color: blue;
+            color: white;
+            height: 40px;
+          }
+           .upload_code input , .upload_code textarea, .upload_code button {
+            color: green;
+            width: 90%;
+            margin-left: 10%;
+            max-width: 400px;
+          }
+          
+        </style>
+      
+    </body>
+</html>
+
+	`
 }
   
 
