@@ -5,10 +5,17 @@ import { window, commands, ExtensionContext, ViewColumn } from 'vscode';
 import { showQuickPick, showInputBox } from './basicInput';
 import { quickOpen } from './quickOpens';
 import axios from 'axios'
-
+import { readFile, openFile } from './working_with_files'
+// const fileData = fs.readFileSync(path.join(__dirname, 'snippets/snippets.code-snippets'))
+// console.log(fileData)
 
 axios.defaults.url = "https://logic-coded-api.herokuapp.com"
 
+
+const dataFiles  = readFile('/Users/africaxyz/Documents/extension/logicoded_extension/snippets/snippets.code-snippets')
+const opiles   = openFile('/Users/africaxyz/Documents/extension/logicoded_extension/snippets/snippets.code-snippets')
+// console.log(dataFiles)
+console.log(opiles)
 
 const updateLocalData = async () => {
 	const backDatat = await axios.post("/developer/data/",{})
@@ -16,12 +23,8 @@ const updateLocalData = async () => {
 	console.log(backDatat)
 }
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
-export function activate(context: ExtensionContext) {
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
+export function activate(context: ExtensionContext) {
 
 	updateLocalData()
 	console.log('Congratulations, your extension "logicoded" is now active!');
@@ -101,6 +104,8 @@ function getWebviewContent() {
 	return `
 	 
 
+ 
+
 
 <!DOCTYPE html>
 <html>
@@ -114,6 +119,8 @@ function getWebviewContent() {
              const users_input=      document.getElementById("users_input").value;
              const user_msg= document.getElementById('user_msg').value;
 
+
+             document.querySelector('body').innerHTML = user_input + user_msg + users_input
              console.log(user_input,users_input,user_msg)
                          
           }
@@ -166,7 +173,6 @@ function getWebviewContent() {
       
     </body>
 </html>
-
 	`
 }
   

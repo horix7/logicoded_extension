@@ -1,0 +1,20 @@
+{
+    "Print to console": {
+		"prefix": "console log data out here  ",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+    }
+    ,
+    
+    "Print to console1": {
+		"prefix": "  cosnle number 2  ",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+}
