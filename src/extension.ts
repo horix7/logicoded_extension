@@ -6,8 +6,7 @@ import { showQuickPick, showInputBox } from './basicInput';
 import { quickOpen } from './quickOpens';
 import axios from 'axios'
 import { readFile, openFile } from './working_with_files'
-// const fileData = fs.readFileSync(path.join(__dirname, 'snippets/snippets.code-snippets'))
-// console.log(fileData)
+
 
 axios.defaults.url = "https://logic-coded-api.herokuapp.com"
 
