@@ -11,3 +11,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.twoElem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: start;
+}
+
+.content {
+  padding: 10px;
+}
+.maonHeader  {
+  font-size: large;
+}
+
+.paragraph {
+  font-size: medium;
+}
+
+.buttonHolder {
+  width: 200px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  padding: 10px 10px 0px 10px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: rgba(0, 0, 255, 0.445);
+  color: white;
+  border: 1px solid black ;
+}
+
+.buttonHolder p {
+  margin-top: -2px;
+}
