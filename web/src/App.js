@@ -9,9 +9,9 @@ function App() {
       <HeaderNav />
 
       <HomePage />
-      <SignUpForm />
+      {/* <SignUpForm /> */}
 
-      <SubmitCodeElement />
+      {/* <SubmitCodeElement /> */}
     </div>
   );
 }
