@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -51,6 +51,21 @@ const useStyles = makeStyles((theme) => ({
 export  function SignUpForm() {
   const classes = useStyles();
 
+   const [name, setName] = useState("")
+   const [email, setEmail] = useState("")
+   const [password, setPassword] = useState("")
+
+
+   const handleLogin = () => {
+     const user_info = {
+       name: name,
+       email: email,
+       password: password
+     }
+
+
+   }
+
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -72,6 +87,7 @@ export  function SignUpForm() {
             name="name"
             autoComplete="email"
             autoFocus
+            onChange={(event) => console.log(event)}
           />
           <TextField
             variant="outlined"
@@ -83,6 +99,7 @@ export  function SignUpForm() {
             name="email"
             autoComplete="email"
             autoFocus
+            onChange={(event) => console.log(event)}
           />
           <TextField
             variant="outlined"
@@ -153,6 +170,7 @@ export  function SubmitCodeElement() {
               label="code prefix"
               name="prefix"
               autoFocus
+              onChange={(event) => console.log(event)}
             />
             <TextField
               variant="outlined"
