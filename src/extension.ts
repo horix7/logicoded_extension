@@ -8,7 +8,7 @@ import axios from 'axios'
 import { readFile, openFile } from './working_with_files'
 
 
-axios.defaults.url = "https://logic-coded-api.herokuapp.com"
+axios.defaults.url = "https://logic-coded-default-rtdb.firebaseio.com/"
 
 
 // const dataFiles  = readFile('/Users/africaxyz/Documents/extension/logicoded_extension/snippets/snippets.code-snippets')
@@ -16,8 +16,10 @@ axios.defaults.url = "https://logic-coded-api.herokuapp.com"
 
 // console.log(opiles)
 
+
+
 const updateLocalData = async () => {
-	const backDatat = await axios.post("/developer/data/",{})
+	const backDatat = await axios.post("/developer/"+ ,{})
 
 	console.log(backDatat)
 }
