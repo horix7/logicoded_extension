@@ -15,14 +15,17 @@ axios.defaults.url = "https://logic-coded-api.herokuapp.com"
 const dataFiles  = readFile('/Users/africaxyz/Documents/extension/logicoded_extension/snippets/snippets.code-snippets')
 const opiles   = openFile('/Users/africaxyz/Documents/extension/logicoded_extension/snippets/snippets.code-snippets')
 // console.log(dataFiles)
-console.log(opiles)
 
 const updateLocalData = async () => {
 	const backDatat = await axios.post("/developer/data/",{})
+	console.log(JSON.stringify(backDatat))
 
-	console.log(backDatat)
+	return JSON.stringify(backDatat)
+
 }
 
+
+console.log(updateLocalData(), "worked ")
 
 export function activate(context: ExtensionContext) {
 
