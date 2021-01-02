@@ -6,12 +6,18 @@ import { showQuickPick, showInputBox } from './basicInput';
 import { quickOpen } from './quickOpens';
 import axios from 'axios'
 import { readFile, openFile } from './working_with_files'
-// const fileData = fs.readFileSync(path.join(__dirname, 'snippets/snippets.code-snippets'))
-// console.log(fileData)
-
-axios.defaults.url = "https://logic-coded-api.herokuapp.com"
 
 
+axios.defaults.url = "https://logic-coded-default-rtdb.firebaseio.com/"
+
+
+// const dataFiles  = readFile('/Users/africaxyz/Documents/extension/logicoded_extension/snippets/snippets.code-snippets')
+// const opiles   = openFile('/Users/africaxyz/Documents/extension/logicoded_extension/snippets/snippets.code-snippets')
+
+// console.log(opiles)
+
+
+<<<<<<< HEAD
 const dataFiles  = readFile('/Users/africaxyz/Documents/extension/logicoded_extension/snippets/snippets.code-snippets')
 const opiles   = openFile('/Users/africaxyz/Documents/extension/logicoded_extension/snippets/snippets.code-snippets')
 // console.log(dataFiles)
@@ -21,6 +27,11 @@ const updateLocalData = async () => {
 	console.log(JSON.stringify(backDatat))
 
 	return JSON.stringify(backDatat)
+=======
+
+const updateLocalData = async () => {
+	const backDatat = await axios.post("/developer/"+ ,{})
+>>>>>>> a1460f30e3a6a74335f5b9cb5c979444e86569e5
 
 }
 
@@ -105,9 +116,7 @@ export function activate(context: ExtensionContext) {
 
 function getWebviewContent() {
 	return `
-	 
-
- 
+	
 
 
 <!DOCTYPE html>
@@ -116,65 +125,21 @@ function getWebviewContent() {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script language="JavaScript">
-          function showInput() {
-             const user_input= document.getElementById("user_input").value;
-             const users_input=      document.getElementById("users_input").value;
-             const user_msg= document.getElementById('user_msg').value;
-
-
-             document.querySelector('body').innerHTML = user_input + user_msg + users_input
-             console.log(user_input,users_input,user_msg)
-                         
-          }
-         
-        </script>
+      
   <title>Logicoded </title>
       
         </head>
     <body>
-        <div class="upload_code">
-            <input type="text"  placeholder="Name" id="user_input">
-            <input type="text" placeholder="lastname" id="users_input">
-            <textarea name="Message" id="user_msg" cols="30" rows="10"></textarea>
-        <input type="submit" onclick="showInput();"><br/>
-          
-        </div>
-        <br>
 
-        <style>
-          * {
-            background-color: transparent;
-            outline: none;
-      
-          }
-      
-         
-          input {
-            height: 40px;
-          }
-          .upload_code {
-            margin-top: 100px;
-            display: grid;
-            grid-template-columns: 1fr;
-            row-gap: 30px;
-          }
-      
-          .submit-btn {
-            background-color: blue;
-            color: white;
-            height: 40px;
-          }
-           .upload_code input , .upload_code textarea, .upload_code button {
-            color: green;
-            width: 90%;
-            margin-left: 10%;
-            max-width: 400px;
-          }
-          
-        </style>
-      
-    </body>
+	<iframe src="http://localhost:3000"  width="100%"  height="10000px" title="deep snippets "></iframe>
+      <style>
+         iframe {
+           border: none;
+           margin: none;
+         }
+      </style>
+        </body>
+
 </html>
 	`
 }
