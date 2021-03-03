@@ -13,7 +13,7 @@ import { Home } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
-  navbarDisplayFlex: {
+  navbarDisplayFlex: { 
     display: `flex`,
     justifyContent: `space-between`,
   },
