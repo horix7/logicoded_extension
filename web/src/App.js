@@ -1,6 +1,7 @@
 import './App.css';
 import { SignUpForm, SubmitCodeElement } from "./compnents/forms";
 import { HeaderNav } from './compnents/mainnac'
+import AdminPage from './containers/admin'
 import HomePage from './containers/home'
 import {
   BrowserRouter as Router,
@@ -23,6 +24,11 @@ function App() {
           </Route>
           <Route path="/commit">
       <SubmitCodeElement />
+
+          </Route>
+
+          <Route path="/admin">
+      <AdminPage />
 
           </Route>
           <Route path="/">
