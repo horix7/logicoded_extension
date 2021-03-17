@@ -1,11 +1,12 @@
 {
-	"name": "logicoded",
-	"displayName": "logicoded",
+	"name": "Deep Snippets",
+	"displayName": "Deep Snippets",
 	"description": "Code With Natural Language ",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.51.0"
 	},
+	"publisher": "Logic coded",
 	"categories": [
 		"Snippets",
 		"Other"
@@ -74,3 +75,4 @@
 		"axios": "^0.21.0"
 	}
 }
+
